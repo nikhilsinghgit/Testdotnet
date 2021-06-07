@@ -25,5 +25,5 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
+        tags: test:2.0
           $(tag)
