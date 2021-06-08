@@ -25,11 +25,11 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: $(dockerhub_username):testdotnet:$(Build.BuildId)
+        tags: $(dockerhub_username)/testdotnet:$(Build.BuildId)
 
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
         repository: 'testdotnet'
         command: 'push'
-        tags: '$(dockerhub_username):testdotnet:$(Build.BuildId)'
+        tags: '$(dockerhub_username)/testdotnet:$(Build.BuildId)'
