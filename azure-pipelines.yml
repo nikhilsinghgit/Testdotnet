@@ -24,5 +24,11 @@ stages:
         inputs:
           containerRegistry: 'Docker Hub'
           repository: 'easternakshay00/testdotnet'
-          command: 'buildAndPush'
+          command: 'build'
+          Dockerfile: '**/Dockerfile'
+      - task: Docker@2
+        inputs:
+          containerRegistry: 'Docker Hub'
+          repository: 'easternakshay00/testdotnet'
+          command: 'build'
           Dockerfile: '**/Dockerfile'
