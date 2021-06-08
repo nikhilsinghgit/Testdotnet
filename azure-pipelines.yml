@@ -26,7 +26,7 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: $(dockerhub_username):testdotnet:$(Build.BuildId)
-          $(tag)
+
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
