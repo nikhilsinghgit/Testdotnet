@@ -10,7 +10,7 @@ resources:
 
 variables:
   - name: DOCKER_IMAGE
-    value: easternakshay00/testdotnet
+    value: nikhilsinghdocker/testdotnet
   - name: DOCKER_TAG_RELEASE
     value: latest
 
@@ -25,14 +25,14 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'Docker Hub'
+          containerRegistry: 'nikhildocker'
           repository: $(DOCKER_IMAGE)
           tags: $(DOCKER_TAG_RELEASE)
           command: 'build'
           Dockerfile: '**/Dockerfile'
       - task: Docker@2
         inputs:
-          containerRegistry: 'Docker Hub'
+          containerRegistry: 'nikhildocker'
           repository: $(DOCKER_IMAGE)
           tags: $(DOCKER_TAG_RELEASE)
           command: 'push'
