@@ -30,5 +30,4 @@ stages:
         inputs:
           containerRegistry: 'Docker Hub'
           repository: 'easternakshay00/testdotnet'
-          command: 'build'
-          Dockerfile: '**/Dockerfile'
+          command: 'push'
